@@ -1,0 +1,10 @@
+{
+  "name": "routr",
+  "version": "0.0.1",
+  "description": "A Javascript router.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": ["Javascript"],
+  "author": "Oliver Huckfeldt",
+  "license": "MIT"
+}
