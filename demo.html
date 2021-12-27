@@ -6,13 +6,33 @@
     </head>
     <body>
         <ul>
-            <li><a href="#route-one">Route one</a></li>
-            <li><a href="#route-two">Route two</a></li>
-            <li><a href="#route-three">Route three</a></li>
+            <li><!--<a href="#route-one">Route one</a>-->
+                <button id="route-one">Route one</button></li>
+            <li><!--<a href="#route-two">Route two</a>-->
+                <button id="route-two">Route one</button></li>
+            <li><!--<a href="#route-three">Route three</a>-->
+                <button id="route-three">Route one</button></li>
         </ul>
         <script src="routr.js"></script>
         <script>
             const routr = new Routr();
+
+            const routeOne = document.getElementById('route-one');
+            const routeTwo = document.getElementById('route-two');
+            const routeThree = document.getElementById('route-three');
+
+            routr.register('#route-one', () => {console.log('Route one.');});
+            routr.register('#route-two', () => {console.log('Route two.');});
+
+            routeOne.addEventListener('click', (event) => {
+                routr.navTo('#route-one');
+            });
+            routeTwo.addEventListener('click', (event) => {
+                routr.navTo('#route-two');
+            });
+            routeThree.addEventListener('click', (event) => {
+                routr.navTo('#route-three');
+            });
         </script>
     </body>
 </html>
